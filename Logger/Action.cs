@@ -6,11 +6,39 @@ using System.Threading.Tasks;
 
 namespace Logger
 {
-    public class Action
+    public static class Action
     {
-        private static object StartMethod()
+        public static Result StartMethod()
         {
-            return null;
+            Result result = new Result()
+            {
+                Status = true,
+                Message = "Start method: Start Method()",
+                Type = "Info"
+            };
+            return result;
+        }
+
+        public static Result SkippedLogic()
+        {
+            Result result = new Result()
+            {
+                Status = true,
+                Message = "Skipped logic in method : SkippedLogic()",
+                Type = "Warning"
+            };
+            return result;
+        }
+
+        public static Result BrokeLogic()
+        {
+            Result result = new Result()
+            {
+                Status = false,
+                Message = "I broke a logic",
+                Type = "Error"
+            };
+            return result;
         }
     }
 }

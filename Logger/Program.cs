@@ -6,7 +6,9 @@ namespace Logger
     {
         private static void Main(string[] args)
         {
-            Run();
+            Starter starter = new Starter();
+            starter.Run();
+            Console.ReadLine();
         }
     }
 }
