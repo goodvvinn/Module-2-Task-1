@@ -28,13 +28,13 @@ namespace Logger
         public void Save(Result result)
         {
             string message = "Action failed by a reason : " + result.Message;
-            Report += result.Message + Environment.NewLine;
+            Report += DateTime.Now.ToString("h:mm:ss\t") + result.Message + Environment.NewLine;
         }
 
         public void Display(Result result)
         {
             string time = DateTime.Now.ToString("h:mm:ss");
-            string message = time + ":" + result.Type + ":" + result.Message;
+            string message = time + ":\t" + result.Type + ":\t\t" + result.Message;
             Console.WriteLine(message);
         }
 

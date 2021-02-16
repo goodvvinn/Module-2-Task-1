@@ -8,7 +8,18 @@ namespace Logger
 {
    public class Starter
     {
-        public Logger Logger { get; set; }
+        private Logger _logger;
+        public Logger Logger
+        {
+            get
+            {
+                return _logger;
+            }
+            set
+            {
+                _logger = value;
+            }
+        }
 
         public void Run()
         {
